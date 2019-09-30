@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+    <title>Yuhang Xiong's Portfolio</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -37,20 +37,20 @@
   <body>
     <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Yuhang Xiong</a>
+  <a class="navbar-brand" href="{%url 'home'%}">Yuhang Xiong</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Github</a>
+        <a class="nav-link" href="https://github.com/Chandler2015" target="_blank" >Github</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{%static 'YXResume.pdf'%}">Resume</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" href="{%url 'allblogs'%}">Blog</a>
       </li>
     
     </ul>
@@ -93,7 +93,7 @@
 
 </main>
 
-<footer class="text-muted">
+<footer class="fixed-bottom">
   <div class="container text-center">
    <p>© Yuhang Xiong {%now "Y"%}</p>
   </div>
