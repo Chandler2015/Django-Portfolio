@@ -7,10 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
+
+    <script src="https://kit.fontawesome.com/680f28b72a.js" crossorigin="anonymous"></script>
     <title>Yuhang Xiong's Portfolio</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -33,6 +35,7 @@
     </style>
     <!-- Custom styles for this template -->
     <link href="album.css" rel="stylesheet">
+    
   </head>
   <body>
     <header>
@@ -60,40 +63,54 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
+  <section class="jumbotron text-center"style="background-repeat:no-repeat;background-position: top; background-attachment: fixed;background-image: url('{% static "background.jpg"%}')">
     <div class="container">
-      <h1 class="jumbotron-heading">Hi, I'm Yuhang.</h1>
+      <h1 class="jumbotron-heading">Hi,I'm Yuhang <span class="fas fa-user-graduate fa-xs"></h1>
       <p class="lead text-muted">Hey, my name is Yuhang Xiong. I like making websites and nice to meet you here!</p>
       <p>
+        <i class="fas fa-envelope"> yxiong4@ualberta.ca </i>
+        <i class="fas fa-phone"> 7807299068 </i> 
+        <br>
         <a href="mailto:yxiong4@ualberta.ca" class="btn btn-primary my-2">Email Me</a>
       </p>
-      <img src= "{%static 'google image.jpeg'%}" height="200" />
+      <img class="rounded-circle" src= "{%static 'mypicture.jpeg'%}" height="200" />
     </div>
   </section>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-center">
+     <li class="navbar-brand nav-link">Latest Projects</li>
+  </nav>
+
 
   <div class="album py-5 bg-light">
     <div class="container">
 
       <div class="row">
 
-      {%for project in projects.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" width="100%" height="225" src = "{{project.image.url}}" />
-            <div class="card-body">
-              <p class="card-text">{{project.summary}}</p>   
-            </div>
-          </div>
-        </div>
-        {%endfor%}
-        
+              {%for project in projects.all %}
+                <div class="col-md-4 text-center">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" width="100%" height="225" src = "{{project.image.url}}" />
+                    <div class="card-body">
+                      <a class="text-center" href="{{project.link}}" target="_blank">{{project.title}}</a>
+                      <p class="card-text">{{project.summary}}</p>  
+                    </div>
+                  </div>
+                </div>
+              {%endfor%}  
+             
+              <a href="http://github.com/Chandler2015" class="btn btn-primary" target="_blank" >See More Projects...</a>
+              
       </div>
     </div>
+    
   </div>
+  
 
 </main>
 
-<footer class="fixed-bottom">
+<hr>
+<footer>
   <div class="container text-center">
    <p>© Yuhang Xiong {%now "Y"%}</p>
   </div>
@@ -103,3 +120,19 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </html>
+
+<style>
+a:link{
+  text-decoration:none
+}
+a:hover{
+  color:red
+}
+body{
+font-family: 'Mansalva', cursive;
+}
+
+section{
+  background-img:url('{%static 'background.jpg'%}')
+}
+</style>
