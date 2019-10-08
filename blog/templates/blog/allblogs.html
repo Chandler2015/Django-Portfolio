@@ -70,7 +70,7 @@
         {%if blog.is_published%}
           <a href="{%url 'blogdetail' blog.id %}"><h3>{{blog.title}}</h3></a>
           {%if pub_date%}{{blog.pub_date_pretty}}{%endif%}
-          {%if blog.image.url%}
+          {%if blog.image%}
           <br>
           <img class = "img-fluid" src = "{{blog.image.url}}" height =200 width=300/>
           <br>
